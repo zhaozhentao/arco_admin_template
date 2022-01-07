@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-demo">
+  <div class="page-wrapper">
     <div class="layout-navbar">
       <div class="navbar">
 
@@ -33,6 +33,13 @@ export default {
 </script>
 
 <style scoped>
+.page-wrapper {
+  box-sizing: border-box;
+  padding-top: 60px;
+  width: 100%;
+  height: 100%;
+}
+
 .layout-navbar {
   position: fixed;
   top: 0;
@@ -49,13 +56,6 @@ export default {
   height: 100%;
   background-color: var(--color-bg-2);
   border-bottom: 1px solid var(--color-border);
-}
-
-.menu-demo {
-  box-sizing: border-box;
-  padding-top: 60px;
-  width: 100%;
-  height: 100%;
 }
 
 .content-wrapper {
