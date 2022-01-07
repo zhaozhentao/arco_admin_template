@@ -25,7 +25,9 @@ export default {
   },
   computed: {
     fullPath() {
-      return this.parentPath === '' ? this.item.path : this.parentPath + '/' + this.item.path
+      let path = this.item.path.startsWith('/') ? this.item.path.substr(1) : this.item.path
+      path = this.parentPath + '/' + path
+      return path.replaceAll('//', '/')
     }
   }
 }

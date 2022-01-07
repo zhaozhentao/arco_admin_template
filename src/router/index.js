@@ -9,17 +9,17 @@ export const routes = [
   },
 
   {
-    path: '/he',
+    path: '/',
     component: Layout,
-    meta: {title: '一级', icon: 'icon-apps'},
+    meta: {title: 'Menu1', icon: 'icon-apps'},
     children: [{
-      path: 'fuck',
-      component: import('@/views/404'),
-      meta: {title: '救救孩子', icon: 'icon-face-smile-fill'}
-    }, {
-      path: 'fuck2',
+      path: '/dashboard',
       component: import('@/views'),
-      meta: {title: '救救孩子2', icon: 'icon-face-smile-fill'}
+      meta: {title: 'Dashboard', icon: 'icon-face-smile-fill'}
+    }, {
+      path: '/form',
+      component: import('@/views'),
+      meta: {title: 'Form', icon: 'icon-face-smile-fill'}
     }]
   },
 

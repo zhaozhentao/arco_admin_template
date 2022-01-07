@@ -31,11 +31,6 @@ export default {
   },
   props: {
     msg: String
-  },
-  data() {
-    return {
-      count: 1
-    }
   }
 }
 </script>
