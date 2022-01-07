@@ -2,14 +2,22 @@
   <div class="page-wrapper">
     <div class="layout-navbar">
       <div class="navbar">
+        <div class="side-left">
+          <div style="height: 38px">
+            <img src="@/assets/icon.svg"/>
+          </div>
 
+          <h5 class="arco-typography brand">
+            Arco Design
+          </h5>
+        </div>
       </div>
     </div>
 
     <div class="content-wrapper">
-      <side-bar />
+      <side-bar/>
 
-      <router-view class="content" />
+      <router-view class="content"/>
     </div>
   </div>
 </template>
@@ -58,6 +66,12 @@ export default {
   border-bottom: 1px solid var(--color-border);
 }
 
+.side-left {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
 .content-wrapper {
   display: flex;
   width: 100%;
@@ -66,5 +80,10 @@ export default {
 
 .content {
   width: 100%;
+}
+
+.brand {
+  font-size: 18px;
+  margin: 0 0 0 8px;
 }
 </style>
