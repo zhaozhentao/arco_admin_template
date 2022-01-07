@@ -1,9 +1,5 @@
-<script setup>
-import HelloWorld from './components/Layout'
-</script>
-
 <template>
-  <HelloWorld msg="Vue 3 + Vite" />
+  <router-view />
 </template>
 
 <style>
