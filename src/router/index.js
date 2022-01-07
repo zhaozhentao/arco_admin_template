@@ -16,6 +16,10 @@ export const routes = [
       path: 'fuck',
       component: import('@/views/404'),
       meta: {title: '救救孩子', icon: 'icon-face-smile-fill'}
+    }, {
+      path: 'fuck2',
+      component: import('@/views'),
+      meta: {title: '救救孩子2', icon: 'icon-face-smile-fill'}
     }]
   },
 

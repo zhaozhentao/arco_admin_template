@@ -3,6 +3,7 @@
       :style="{ width: '220px', height: '100%', flexShrink: 0 }"
       :default-selected-keys="[openedMenu]"
       :auto-open="true"
+      @menu-item-click="to"
       show-collapse-button
   >
 
@@ -23,6 +24,11 @@ export default {
     },
     openedMenu() {
       return this.$route.path
+    }
+  },
+  methods: {
+    to(key) {
+      this.$router.push(key)
     }
   }
 }
