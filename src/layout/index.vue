@@ -6,7 +6,11 @@
       </div>
     </div>
 
-    <side-bar />
+    <div class="content-wrapper">
+      <side-bar />
+
+      <router-view class="content" />
+    </div>
   </div>
 </template>
 
@@ -52,5 +56,15 @@ export default {
   padding-top: 60px;
   width: 100%;
   height: 100%;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
 }
 </style>

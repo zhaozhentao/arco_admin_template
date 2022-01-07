@@ -1,6 +1,6 @@
 <template>
   <a-menu
-      :style="{ width: '200px', height: '100%' }"
+      :style="{ width: '220px', height: '100%', flexShrink: 0 }"
       :default-open-keys="['0', '1', '2']"
       :default-selected-keys="['0_1']"
       show-collapse-button
