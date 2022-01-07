@@ -26,15 +26,15 @@ export const routes = [
   {
     path: '/menu2',
     component: Layout,
-    meta: {title: 'Menu2', icon: 'icon-apps'},
+    meta: {title: 'Menu2', icon: 'icon-idcard'},
     children: [{
       path: 'dashboard',
       component: import('@/views'),
-      meta: {title: 'Dashboard', icon: 'icon-face-smile-fill'}
+      meta: {title: 'Files', icon: 'icon-face-smile-fill'}
     }, {
       path: 'form',
       component: import('@/views'),
-      meta: {title: 'Form', icon: 'icon-face-smile-fill'}
+      meta: {title: 'Dir', icon: 'icon-face-smile-fill'}
     }]
   },
 
