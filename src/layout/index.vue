@@ -34,7 +34,7 @@ export default {
 <style scoped>
 .page-wrapper {
   box-sizing: border-box;
-  padding-top: 60px;
+  padding-top: 50px;
   width: 100%;
   height: 100%;
 }
@@ -46,7 +46,7 @@ export default {
   z-index: 100;
   width: 100%;
   min-width: 1100px;
-  height: 60px;
+  height: 50px;
 }
 
 .navbar {
