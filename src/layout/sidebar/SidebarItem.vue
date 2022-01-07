@@ -4,9 +4,7 @@
   </a-menu-item>
 
   <a-sub-menu v-else :key="fullPath">
-    <template v-if="item.meta.icon" #icon>
-      <component :is="item.meta.icon" />
-    </template>
+    <template v-if="item.meta.icon" #icon><component :is="item.meta.icon" /></template>
 
     <template #title>{{ item.meta.title }}</template>
 
