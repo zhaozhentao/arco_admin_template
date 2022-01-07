@@ -1,8 +1,8 @@
 <template>
   <a-menu
       :style="{ width: '220px', height: '100%', flexShrink: 0 }"
-      :default-open-keys="['0', '1', '2']"
-      :default-selected-keys="['0_1']"
+      :default-selected-keys="[openedMenu]"
+      :auto-open="true"
       show-collapse-button
   >
 
@@ -20,6 +20,9 @@ export default {
   computed: {
     routes() {
       return this.$router.options.routes.filter(i => !i['hidden'])
+    },
+    openedMenu() {
+      return this.$route.path
     }
   }
 }

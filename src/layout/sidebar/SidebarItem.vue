@@ -25,7 +25,11 @@ export default {
   },
   computed: {
     fullPath() {
-      return this.parentPath + this.item.path
+      if (this.parentPath === '') {
+        return this.item.path
+      }
+
+      return this.parentPath + '/' + this.item.path
     }
   }
 }
