@@ -23,7 +23,26 @@ export const routes = [
     }]
   },
 
-  {path: '/:catchAll(.*)', redirect: '/404', hidden: true}
+  {
+    path: '/menu2',
+    component: Layout,
+    meta: {title: 'Menu2', icon: 'icon-apps'},
+    children: [{
+      path: 'dashboard',
+      component: import('@/views'),
+      meta: {title: 'Dashboard', icon: 'icon-face-smile-fill'}
+    }, {
+      path: 'form',
+      component: import('@/views'),
+      meta: {title: 'Form', icon: 'icon-face-smile-fill'}
+    }]
+  },
+
+  {
+    path: '/:catchAll(.*)',
+    redirect: '/404',
+    hidden: true
+  }
 ]
 
 const buildRouter = () => createRouter({
