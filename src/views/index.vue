@@ -8,10 +8,8 @@
       </a-breadcrumb>
 
       <a-layout-content>
-        <a-table :columns="columns" :data="data"/>
+        <a-table :columns="columns" :data="data" />
       </a-layout-content>
-
-      <a-layout-footer>Footer</a-layout-footer>
     </a-layout>
   </a-layout>
 </template>
@@ -21,10 +19,11 @@ export default {
   data() {
     return {
       columns: [
-        {title: 'Name', dataIndex: 'name',},
-        {title: 'Salary', dataIndex: 'salary',},
-        {title: 'Address', dataIndex: 'address',},
-        {title: 'Email', dataIndex: 'email',},
+        {title: 'Key', dataIndex: 'key'},
+        {title: 'Name', dataIndex: 'name'},
+        {title: 'Salary', dataIndex: 'salary'},
+        {title: 'Address', dataIndex: 'address'},
+        {title: 'Email', dataIndex: 'email'},
       ],
       data: [{
         key: '1',
@@ -56,6 +55,78 @@ export default {
         salary: 27000,
         address: '62 Park Road, London',
         email: 'william.smith@example.com'
+      }, {
+        key: '6',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '7',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '8',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '9',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '10',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '11',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '12',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '13',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '14',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '15',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '16',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
+      }, {
+        key: '17',
+        name: 'William Smith',
+        salary: 27000,
+        address: '62 Park Road, London',
+        email: 'william.smith@example.com'
       }]
     }
   }
@@ -66,6 +137,7 @@ export default {
 .layout-demo :deep(.arco-layout-content) {
   background: var(--color-bg-3);
   padding: 16px;
+  margin-bottom: 16px;
 }
 
 .layout-demo :deep(.arco-layout-footer) {
