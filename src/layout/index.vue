@@ -71,6 +71,7 @@ export default {
 
 .content {
   width: 100%;
+  overflow-y: scroll;
 }
 
 .brand {
