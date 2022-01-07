@@ -1,13 +1,3 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String
-})
-
-const count = ref(0)
-</script>
-
 <template>
   <a-space>
     <a-button type="primary">Primary</a-button>
@@ -21,6 +11,19 @@ const count = ref(0)
 
   <button type="button" @click="count++">count is: {{ count }}</button>
 </template>
+
+<script>
+export default {
+  props: {
+    msg: String
+  },
+  data() {
+    return {
+      count: 1
+    }
+  }
+}
+</script>
 
 <style scoped>
 a {
