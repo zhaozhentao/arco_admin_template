@@ -14,11 +14,11 @@ export const routes = [
     meta: {title: 'Menu1', icon: 'icon-apps'},
     children: [{
       path: '/dashboard',
-      component: import('@/views'),
+      component: () => import('@/views/index'),
       meta: {title: 'Dashboard', icon: 'icon-face-smile-fill'}
     }, {
       path: '/form',
-      component: import('@/views'),
+      component: () => import('@/views/index'),
       meta: {title: 'Form', icon: 'icon-face-smile-fill'}
     }]
   },
@@ -29,11 +29,11 @@ export const routes = [
     meta: {title: 'Menu2', icon: 'icon-idcard'},
     children: [{
       path: 'dashboard',
-      component: import('@/views'),
+      component: () => import('@/views/index'),
       meta: {title: 'Files', icon: 'icon-face-smile-fill'}
     }, {
       path: 'form',
-      component: import('@/views'),
+      component: () => import('@/views/index'),
       meta: {title: 'Dir', icon: 'icon-face-smile-fill'}
     }]
   },

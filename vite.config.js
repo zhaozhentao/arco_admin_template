@@ -9,6 +9,7 @@ function resolve(dir) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'arco_admin/dist',
   resolve: {
     extensions: ['.vue', '.js'],
     alias: {
