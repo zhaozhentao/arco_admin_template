@@ -1,5 +1,5 @@
 {
-  "name": "arco_admin",
+  "name": "arco_admin_template",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
