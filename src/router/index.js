@@ -9,6 +9,12 @@ export const routes = [
   },
 
   {
+    path: '/login',
+    component: () => import('@/views/login'),
+    hidden: true
+  },
+
+  {
     path: '/',
     component: Layout,
     meta: {title: 'Menu1', icon: 'icon-apps'},
