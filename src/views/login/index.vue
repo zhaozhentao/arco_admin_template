@@ -54,7 +54,8 @@
 
 <script>
 import { login } from '@/api/user'
-import {defineComponent, reactive} from 'vue'
+import { useRouter } from 'vue-router'
+import { defineComponent, reactive } from 'vue'
 
 export default defineComponent({
   setup() {
@@ -63,8 +64,12 @@ export default defineComponent({
       password: 'admin',
     })
 
+    const $router = useRouter()
+
     const handleSubmit = async () => {
       const res = await login()
+
+      await $router.push({ name: 'dashboard' })
     }
 
     return {

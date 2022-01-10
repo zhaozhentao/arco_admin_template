@@ -19,6 +19,7 @@ export const routes = [
     component: Layout,
     meta: {title: 'Menu1', icon: 'icon-apps'},
     children: [{
+      name: 'dashboard',
       path: '/dashboard',
       component: () => import('@/views'),
       meta: {title: 'Dashboard', icon: 'icon-face-smile-fill'}
