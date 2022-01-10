@@ -4,7 +4,8 @@ export default [{
   statusCode: 200,
   response: ({body}) => {
     return {
-      message: 'wrong',
+      token: 'user token',
+      name: 'Captain'
     }
   }
 }]

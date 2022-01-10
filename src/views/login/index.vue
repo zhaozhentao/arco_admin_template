@@ -54,6 +54,7 @@
 
 <script>
 import { login } from '@/api/user'
+import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import { defineComponent, reactive } from 'vue'
 
@@ -65,13 +66,14 @@ export default defineComponent({
     })
 
     const $router = useRouter()
+    const store = useStore()
 
     const handleSubmit = async () => {
-      const res = await login()
+      const result = await store.dispatch('user/login', userInfo)
 
-      console.log(res)
-
-      await $router.push({ name: 'dashboard' })
+      if (result) {
+        await $router.push({ name: 'dashboard' })
+      }
     }
 
     return {
