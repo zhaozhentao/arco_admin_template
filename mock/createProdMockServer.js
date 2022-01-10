@@ -1,7 +1,9 @@
 /* eslint-disable */
 import mockJs from 'mockjs'
-import { pathToRegexp } from 'path-to-regexp'
+import {pathToRegexp} from 'path-to-regexp'
+
 const Mock = mockJs
+
 export function createProdMockServer(mockList) {
   Mock.XHR.prototype.__send = Mock.XHR.prototype.send
   Mock.XHR.prototype.send = function () {
@@ -16,7 +18,7 @@ export function createProdMockServer(mockList) {
       for (let k in this.custom.requestHeaders) {
         headers[k.toString().toLowerCase()] = this.custom.requestHeaders[k]
       }
-      this.custom.options = Object.assign({}, this.custom.options, { headers })
+      this.custom.options = Object.assign({}, this.custom.options, {headers})
     }
     this.__send.apply(this, arguments)
   }
@@ -30,15 +32,16 @@ export function createProdMockServer(mockList) {
       }
     }
   }
-  for (const { url, method, response, timeout } of mockList) {
+  for (const {url, method, response, timeout} of mockList) {
     __setupMock__(timeout)
     Mock.mock(
-      pathToRegexp(url, undefined, { end: false }),
+      pathToRegexp(url, undefined, {end: false}),
       method || 'get',
       __XHR2ExpressReqWrapper__(response),
     )
   }
 }
+
 function __param2Obj__(url) {
   const search = url.split('?')[1]
   if (!search) {
@@ -54,11 +57,12 @@ function __param2Obj__(url) {
     '"}',
   )
 }
+
 function __XHR2ExpressReqWrapper__(handle) {
   return function (options) {
     let result = null
     if (typeof handle === 'function') {
-      const { body, type, url, headers } = options
+      const {body, type, url, headers} = options
       result = handle({
         method: type,
         body: JSON.parse(body),
@@ -71,6 +75,7 @@ function __XHR2ExpressReqWrapper__(handle) {
     return Mock.mock(result)
   }
 }
+
 function __setupMock__(timeout = 0) {
   timeout &&
   Mock.setup({
