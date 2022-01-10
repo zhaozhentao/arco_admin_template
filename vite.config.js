@@ -5,6 +5,8 @@ import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
 export default defineConfig(({command}) => {
+  let prodMock = true
+
   return {
     base: 'arco_admin_template/dist',
     resolve: {
