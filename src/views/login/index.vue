@@ -69,6 +69,8 @@ export default defineComponent({
     const handleSubmit = async () => {
       const res = await login()
 
+      console.log(res)
+
       await $router.push({ name: 'dashboard' })
     }
 
