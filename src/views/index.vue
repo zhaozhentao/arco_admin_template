@@ -134,7 +134,7 @@ export default {
   },
   mounted() {
     axios
-        .post('/api/createUser', {
+        .post('/api/createUser2', {
           name: 'vben',
           gender: 'man',
         })

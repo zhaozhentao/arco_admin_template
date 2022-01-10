@@ -1,5 +1,5 @@
 export default [{
-  url: '/api/createUser',
+  url: '/api/createUser2',
   method: 'post',
   response: ({body}) => {
     console.log('body')
