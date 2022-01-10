@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import SidebarItem from './SidebarItem'
+import sidebarItem from './sidebar-item'
 
 export default {
   components: {
-    SidebarItem
+    sidebarItem
   },
   computed: {
     routes() {
