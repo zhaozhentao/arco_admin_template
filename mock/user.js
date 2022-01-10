@@ -1,12 +1,10 @@
 export default [{
-  url: '/api/createUser2',
+  url: '/api/login',
   method: 'post',
+  statusCode: 401,
   response: ({body}) => {
-    console.log('body')
     return {
-      code: 0,
-      message: 'ok',
-      data: '哈哈'
+      message: 'wrong',
     }
   }
 }]

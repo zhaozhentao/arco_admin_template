@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import { login } from '@/api/user'
 import {defineComponent, reactive} from 'vue'
 
 export default defineComponent({
@@ -63,7 +64,7 @@ export default defineComponent({
     })
 
     const handleSubmit = async () => {
-
+      const res = await login()
     }
 
     return {

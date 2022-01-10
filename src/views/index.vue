@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   data() {
@@ -131,16 +130,6 @@ export default {
         email: 'william.smith@example.com'
       }]
     }
-  },
-  mounted() {
-    axios
-        .post('/api/createUser2', {
-          name: 'vben',
-          gender: 'man',
-        })
-        .then(({ data }) => {
-          console.log(data)
-        })
   }
 }
 </script>
