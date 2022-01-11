@@ -7,6 +7,17 @@
         <a-breadcrumb-item>App</a-breadcrumb-item>
       </a-breadcrumb>
 
+      <a-row style="margin-bottom: 16px;">
+        <a-col flex="100px">
+          <a-button type="primary" size="small">Small</a-button>
+        </a-col>
+        <a-col flex="auto">
+        </a-col>
+        <a-col flex="100px" style="text-align: right">
+          <a-button type="primary" size="small">Small</a-button>
+        </a-col>
+      </a-row>
+
       <a-layout-content>
         <a-table :columns="columns" :data="data" />
       </a-layout-content>
