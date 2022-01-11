@@ -3,16 +3,16 @@
     <div class="login-form-title">Login Arco Admin</div>
 
     <a-form
-        ref="loginForm"
-        :model="userInfo"
-        layout="vertical"
-        @submit="handleSubmit"
+      ref="loginForm"
+      :model="userInfo"
+      layout="vertical"
+      @submit="handleSubmit"
     >
       <a-form-item
-          field="username"
-          :rules="[{ required: true, message: '用户名不能为空' }]"
-          :validate-trigger="['change', 'blur']"
-          hide-label
+        field="username"
+        :rules="[{ required: true, message: '用户名不能为空' }]"
+        :validate-trigger="['change', 'blur']"
+        hide-label
       >
         <a-input v-model="userInfo.username" placeholder="用户名：admin" @keyup.enter="handleSubmit">
           <template #prefix>
@@ -22,10 +22,10 @@
       </a-form-item>
 
       <a-form-item
-          field="password"
-          :rules="[{ required: true, message: '密码不能为空' }]"
-          :validate-trigger="['change', 'blur']"
-          hide-label
+        field="password"
+        :rules="[{ required: true, message: '密码不能为空' }]"
+        :validate-trigger="['change', 'blur']"
+        hide-label
       >
         <a-input v-model="userInfo.password" placeholder="密码：admin" type="password" @keyup.enter="handleSubmit">
           <template #prefix>

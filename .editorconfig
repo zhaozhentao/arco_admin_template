@@ -1279,8 +1279,11 @@ ij_json_spaces_within_brackets = false
 ij_json_wrap_long_lines = false
 
 [{*.htm,*.html,*.ng,*.sht,*.shtm,*.shtml}]
+indent_size = 2
+tab_width = 2
+ij_continuation_indent_size = 2
 ij_html_add_new_line_before_tags = body,div,p,form,h1,h2,h3
-ij_html_align_attributes = true
+ij_html_align_attributes = false
 ij_html_align_text = false
 ij_html_attribute_wrap = normal
 ij_html_block_comment_at_first_column = true
@@ -1348,7 +1351,7 @@ ij_properties_spaces_around_key_value_delimiter = false
 [{*.vue,*.wpy}]
 indent_size = 2
 tab_width = 2
-ij_continuation_indent_size = 4
+ij_continuation_indent_size = 2
 ij_vue_indent_children_of_top_level = template
 ij_vue_interpolation_new_line_after_start_delimiter = true
 ij_vue_interpolation_new_line_before_end_delimiter = true
