@@ -25,7 +25,8 @@ npm run build
 
 - [online preview](https://zhaozhentao.github.io/arco_admin_template/dist/index.html#/)
 
-![image](snapshot/screen.png)
+![image](snapshot/screen1.png)
+![image](snapshot/screen2.png)
 
 ## Related Project
 
