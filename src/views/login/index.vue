@@ -64,14 +64,14 @@ export default defineComponent({
       password: 'admin',
     })
 
-    const $router = useRouter()
     const store = useStore()
+    const router = useRouter()
 
     const handleSubmit = async () => {
       const result = await store.dispatch('user/login', userInfo)
 
       if (result) {
-        await $router.push({name: 'dashboard'})
+        await router.push({name: 'dashboard'})
       }
     }
 
