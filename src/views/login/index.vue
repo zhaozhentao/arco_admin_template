@@ -55,7 +55,7 @@
 <script>
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
-import { defineComponent, reactive, ref } from 'vue'
+import { defineComponent, reactive } from 'vue'
 import useLoading from '@/hooks/loading'
 
 export default defineComponent({
