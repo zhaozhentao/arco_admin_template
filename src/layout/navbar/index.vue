@@ -18,6 +18,7 @@
             </a-avatar>
 
             <template #content>
+              <a-doption>Github</a-doption>
               <a-doption>退出登录</a-doption>
             </template>
           </a-dropdown>
@@ -35,6 +36,9 @@ export default {
         case '退出登录':
           await this.$store.dispatch('user/logout')
           await this.$router.replace('/login')
+          break
+        case 'Github':
+          window.open("https://github.com/zhaozhentao/arco_admin_template", "_blank")
           break
       }
     }
