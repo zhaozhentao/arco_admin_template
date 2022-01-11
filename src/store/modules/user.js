@@ -1,4 +1,4 @@
-import { login } from "@/api/user"
+import { login, logout } from "@/api/user"
 import { removeToken, setToken } from "@/utils/auth"
 
 const getDefaultState = () => {
@@ -24,9 +24,14 @@ const actions = {
     }
   },
 
-  logout({ commit }) {
-    commit('RESET_STATE')
+  async logout({ commit }) {
+    try {
+      await logout()
+    } catch (ignore) {
+    }
+
     removeToken()
+    commit('RESET_STATE')
   }
 }
 

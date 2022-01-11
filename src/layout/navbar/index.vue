@@ -34,7 +34,7 @@ export default {
       switch (v) {
         case '退出登录':
           await this.$store.dispatch('user/logout')
-          this.$router.replace('/login')
+          await this.$router.replace('/login')
           break
       }
     }

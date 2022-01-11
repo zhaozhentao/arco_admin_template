@@ -8,4 +8,13 @@ export default [{
       name: 'Captain'
     }
   }
+}, {
+  url: '/api/logout',
+  method: 'delete',
+  statusCode: 200,
+  response: () => {
+    return {
+      message: 'success'
+    }
+  }
 }]
