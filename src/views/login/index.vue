@@ -53,7 +53,6 @@
 </template>
 
 <script>
-import { login } from '@/api/user'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import { defineComponent, reactive } from 'vue'
