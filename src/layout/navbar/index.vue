@@ -6,9 +6,41 @@
 
         <h5 class="arco-typography brand">Arco Design</h5>
       </div>
+
+      <ul class="side-right">
+        <li>
+          <a-dropdown @select="onMenuClick">
+            <a-avatar :size="32">
+              <img
+                  alt="avatar"
+                  src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
+              />
+            </a-avatar>
+
+            <template #content>
+              <a-doption>退出登录</a-doption>
+            </template>
+          </a-dropdown>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    async onMenuClick(v) {
+      switch (v) {
+        case '退出登录':
+          await this.$store.dispatch('user/logout')
+          this.$router.replace('/login')
+          break
+      }
+    }
+  }
+}
+</script>
 
 <style scoped>
 .layout-navbar {
@@ -33,6 +65,13 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
+}
+
+.side-right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  list-style: none;
 }
 
 .brand {

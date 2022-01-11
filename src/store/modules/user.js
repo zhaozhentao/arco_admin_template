@@ -1,5 +1,5 @@
-import {login} from "@/api/user"
-import {setToken} from "@/utils/auth"
+import { login } from "@/api/user"
+import { removeToken, setToken } from "@/utils/auth"
 
 const getDefaultState = () => {
   return {
@@ -22,10 +22,18 @@ const actions = {
     } catch (e) {
       return false
     }
+  },
+
+  logout({ commit }) {
+    commit('RESET_STATE')
+    removeToken()
   }
 }
 
 const mutations = {
+  RESET_STATE: (state) => {
+    Object.assign(state, getDefaultState())
+  },
   SET_TOKEN: (state, token) => {
     state.token = token
   },
