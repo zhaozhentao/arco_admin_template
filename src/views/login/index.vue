@@ -71,7 +71,7 @@ export default defineComponent({
       const result = await store.dispatch('user/login', userInfo)
 
       if (result) {
-        await $router.push({ name: 'dashboard' })
+        await $router.push({name: 'dashboard'})
       }
     }
 

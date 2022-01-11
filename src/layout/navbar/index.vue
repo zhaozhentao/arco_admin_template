@@ -2,7 +2,7 @@
   <div class="layout-navbar">
     <div class="navbar">
       <div class="side-left">
-        <div style="height: 38px"><img src="@/assets/icon.svg"/></div>
+        <div style="height: 38px"><img src="@/assets/icon.svg" /></div>
 
         <h5 class="arco-typography brand">Arco Design</h5>
       </div>

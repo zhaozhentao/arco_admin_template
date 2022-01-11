@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {Message} from "@arco-design/web-vue";
+import { Message } from '@arco-design/web-vue'
 
 const service = axios.create({
   baseURL: import.meta.env.VITE_HOST

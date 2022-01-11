@@ -1,8 +1,8 @@
 import router from '@/router'
 import { getToken } from '@/utils/auth'
-import {Message} from '@arco-design/web-vue'
+import { Message } from '@arco-design/web-vue'
 
-router.beforeEach(async (to, from , next) => {
+router.beforeEach(async (to, from, next) => {
   if (to.path === '/login') {
     next()
     return

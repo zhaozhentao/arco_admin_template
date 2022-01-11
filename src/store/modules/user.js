@@ -13,7 +13,7 @@ const getDefaultState = () => {
 const state = getDefaultState()
 
 const actions = {
-  async login({ commit }, loginForm) {
+  async login({commit}, loginForm) {
     try {
       const res = await login(loginForm)
       commit('SET_TOKEN', res.data.token)
@@ -24,7 +24,7 @@ const actions = {
     }
   },
 
-  async logout({ commit }) {
+  async logout({commit}) {
     try {
       await logout()
     } catch (ignore) {
