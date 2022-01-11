@@ -55,7 +55,8 @@
 <script>
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
-import { defineComponent, reactive } from 'vue'
+import { defineComponent, reactive, ref } from 'vue'
+import useLoading from '@/hooks/loading'
 
 export default defineComponent({
   setup() {
@@ -63,12 +64,15 @@ export default defineComponent({
       username: 'admin',
       password: 'admin',
     })
+    const { loading, setLoading } = useLoading()
 
     const store = useStore()
     const router = useRouter()
 
     const handleSubmit = async () => {
+      setLoading(true)
       const result = await store.dispatch('user/login', userInfo)
+      setLoading(false)
 
       if (result) {
         await router.push({name: 'dashboard'})
@@ -77,6 +81,8 @@ export default defineComponent({
 
     return {
       userInfo,
+      loading,
+      setLoading,
       handleSubmit
     }
   }
