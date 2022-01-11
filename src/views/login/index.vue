@@ -75,7 +75,7 @@ export default defineComponent({
       setLoading(false)
 
       if (result) {
-        await router.push({name: 'dashboard'})
+        await router.push({ name: 'dashboard' })
       }
     }
 

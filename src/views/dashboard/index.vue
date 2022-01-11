@@ -20,11 +20,11 @@ export default {
   data() {
     return {
       columns: [
-        {title: 'Key', dataIndex: 'key'},
-        {title: 'Name', dataIndex: 'name'},
-        {title: 'Salary', dataIndex: 'salary'},
-        {title: 'Address', dataIndex: 'address'},
-        {title: 'Email', dataIndex: 'email'},
+        { title: 'Key', dataIndex: 'key' },
+        { title: 'Name', dataIndex: 'name' },
+        { title: 'Salary', dataIndex: 'salary' },
+        { title: 'Address', dataIndex: 'address' },
+        { title: 'Email', dataIndex: 'email' },
       ],
       data: [{
         key: '1',

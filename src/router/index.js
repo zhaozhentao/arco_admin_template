@@ -17,31 +17,31 @@ export const routes = [
   {
     path: '/',
     component: Layout,
-    meta: {title: 'Menu1', icon: 'icon-apps'},
+    meta: { title: 'Menu1', icon: 'icon-apps' },
     children: [{
       name: 'dashboard',
       path: '/dashboard',
       component: () => import('@/views/dashboard'),
-      meta: {title: 'Dashboard', icon: 'icon-face-smile-fill'}
+      meta: { title: 'Dashboard' }
     }, {
       path: '/form',
       component: () => import('@/views/dashboard'),
-      meta: {title: 'Form', icon: 'icon-face-smile-fill'}
+      meta: { title: 'Form' }
     }]
   },
 
   {
     path: '/menu2',
     component: Layout,
-    meta: {title: 'Menu2', icon: 'icon-idcard'},
+    meta: { title: 'Menu2', icon: 'icon-idcard' },
     children: [{
       path: 'dashboard',
       component: () => import('@/views/dashboard'),
-      meta: {title: 'Files', icon: 'icon-face-smile-fill'}
+      meta: { title: 'Files' }
     }, {
       path: 'form',
       component: () => import('@/views/dashboard'),
-      meta: {title: 'Dir', icon: 'icon-face-smile-fill'}
+      meta: { title: 'Dir' }
     }]
   },
 

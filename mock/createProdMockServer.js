@@ -18,7 +18,7 @@ export function createProdMockServer(mockList) {
       for (let k in this.custom.requestHeaders) {
         headers[k.toString().toLowerCase()] = this.custom.requestHeaders[k]
       }
-      this.custom.options = Object.assign({}, this.custom.options, {headers})
+      this.custom.options = Object.assign({}, this.custom.options, { headers })
     }
     this.__send.apply(this, arguments)
   }
@@ -32,10 +32,10 @@ export function createProdMockServer(mockList) {
       }
     }
   }
-  for (const {url, method, response, timeout} of mockList) {
+  for (const { url, method, response, timeout } of mockList) {
     __setupMock__(timeout)
     Mock.mock(
-      pathToRegexp(url, undefined, {end: false}),
+      pathToRegexp(url, undefined, { end: false }),
       method || 'get',
       __XHR2ExpressReqWrapper__(response),
     )
@@ -62,7 +62,7 @@ function __XHR2ExpressReqWrapper__(handle) {
   return function (options) {
     let result = null
     if (typeof handle === 'function') {
-      const {body, type, url, headers} = options
+      const { body, type, url, headers } = options
       result = handle({
         method: type,
         body: JSON.parse(body),
