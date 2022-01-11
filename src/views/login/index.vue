@@ -1,6 +1,6 @@
 <template>
   <div class="login-form">
-    <div class="login-form-title">登录 Arco Admin</div>
+    <div class="login-form-title">Login Arco Admin</div>
 
     <a-form
         ref="loginForm"
