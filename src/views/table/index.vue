@@ -9,8 +9,7 @@
       <a-col flex="100px">
         <a-button type="primary" size="small">Small</a-button>
       </a-col>
-      <a-col flex="auto">
-      </a-col>
+      <a-col flex="auto" />
       <a-col flex="100px" style="text-align: right">
         <a-button type="primary" size="small">Small</a-button>
       </a-col>
