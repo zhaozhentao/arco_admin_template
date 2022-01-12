@@ -34,7 +34,7 @@ export const routes = [
   {
     path: '/donate',
     component: Layout,
-    meta: { title: 'Donate', icon: 'icon-idcard' }
+    meta: { title: 'Donate', icon: 'icon-thumb-up' }
   },
 
   {
