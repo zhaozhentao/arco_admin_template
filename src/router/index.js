@@ -25,7 +25,7 @@ export const routes = [
       meta: { title: 'table' }
     }, {
       path: '/form',
-      component: () => import('@/views/table'),
+      component: () => import('@/views/form'),
       meta: { title: 'form' }
     }]
   },

@@ -1,27 +1,24 @@
 <template>
   <a-layout class="layout-demo">
-    <a-layout style="padding: 0 16px;">
-      <a-breadcrumb :style="{ margin: '16px 0' }">
-        <a-breadcrumb-item>Home</a-breadcrumb-item>
-        <a-breadcrumb-item>List</a-breadcrumb-item>
-        <a-breadcrumb-item>App</a-breadcrumb-item>
-      </a-breadcrumb>
+    <a-breadcrumb>
+      <a-breadcrumb-item>Example</a-breadcrumb-item>
+      <a-breadcrumb-item>Table</a-breadcrumb-item>
+    </a-breadcrumb>
 
-      <a-row style="margin-bottom: 16px;">
-        <a-col flex="100px">
-          <a-button type="primary" size="small">Small</a-button>
-        </a-col>
-        <a-col flex="auto">
-        </a-col>
-        <a-col flex="100px" style="text-align: right">
-          <a-button type="primary" size="small">Small</a-button>
-        </a-col>
-      </a-row>
+    <a-row style="margin: 16px 0">
+      <a-col flex="100px">
+        <a-button type="primary" size="small">Small</a-button>
+      </a-col>
+      <a-col flex="auto">
+      </a-col>
+      <a-col flex="100px" style="text-align: right">
+        <a-button type="primary" size="small">Small</a-button>
+      </a-col>
+    </a-row>
 
-      <a-layout-content>
-        <a-table :columns="columns" :data="data" />
-      </a-layout-content>
-    </a-layout>
+    <a-layout-content>
+      <a-table :columns="columns" :data="data" />
+    </a-layout-content>
   </a-layout>
 </template>
 
@@ -146,6 +143,10 @@ export default {
 </script>
 
 <style scoped>
+.layout-demo {
+  padding: 16px;
+}
+
 .layout-demo :deep(.arco-layout-content) {
   background: var(--color-bg-3);
   padding: 16px;
