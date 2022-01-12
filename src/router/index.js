@@ -32,6 +32,17 @@ export const routes = [
   },
 
   {
+    path: '/arco',
+    component: Layout,
+    children: [{
+      path: '',
+      component: () => import('@/views/doc'),
+      name: 'Arco Design',
+      meta: { title: 'Arco Design Doc', icon: 'icon-bytedance-color' }
+    }]
+  },
+
+  {
     path: '/donate',
     component: Layout,
     children: [{
