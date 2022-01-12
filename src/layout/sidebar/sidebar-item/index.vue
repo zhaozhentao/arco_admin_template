@@ -1,10 +1,10 @@
 <template>
-  <a-menu-item v-if="item.children === undefined || item.children.length === 0" :key="fullPath">
-    <template v-if="item.meta.icon" #icon>
-      <component :is="item.meta.icon" />
+  <a-menu-item v-if="item.children === undefined || item.children.length === 1" :key="fullPath">
+    <template v-if="item.children !== undefined" #icon>
+      <component :is="item.children[0].meta.icon" />
     </template>
 
-    {{ item.meta.title }}
+    {{ item.children === undefined ? item.meta.title : item.children[0].meta.title }}
   </a-menu-item>
 
   <a-sub-menu v-else :key="fullPath">

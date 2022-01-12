@@ -34,7 +34,12 @@ export const routes = [
   {
     path: '/donate',
     component: Layout,
-    meta: { title: 'Donate', icon: 'icon-thumb-up' }
+    children: [{
+      path: '',
+      name: 'donate',
+      component: () => import('@/views/donate'),
+      meta: { title: 'Donate', icon: 'icon-thumb-up' }
+    }]
   },
 
   {
