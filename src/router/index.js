@@ -19,11 +19,12 @@ export const routes = [
     component: Layout,
     meta: { title: 'Example', icon: 'icon-apps' },
     children: [{
-      name: 'Table',
+      name: 'table',
       path: '/table',
       component: () => import('@/views/table'),
       meta: { title: 'table' }
     }, {
+      name: 'form',
       path: '/form',
       component: () => import('@/views/form'),
       meta: { title: 'form' }
