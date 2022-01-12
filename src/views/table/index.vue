@@ -16,7 +16,27 @@
     </a-row>
 
     <a-layout-content>
-      <a-table :columns="columns" :data="data" />
+      <a-table :data="data">
+        <template #columns>
+          <a-table-column title="Name" data-index="name" :width="140"/>
+          <a-table-column title="Salary" data-index="salary" :width="100"/>
+          <a-table-column title="Address" data-index="address">
+            <template #cell="{ record }">
+              <div style="min-width: 200px;">{{ record.address }}</div>
+            </template>
+          </a-table-column>
+          <a-table-column class="min" title="Email" data-index="email" >
+            <template #cell="{ record }">
+              <div style="min-width: 200px;">{{ record.email }}</div>
+            </template>
+          </a-table-column>
+          <a-table-column title="Optional" :width="100">
+            <template #cell="{ record }">
+              <a-button @click="$modal.info({ title:'Name', content:record.name })">view</a-button>
+            </template>
+          </a-table-column>
+        </template>
+      </a-table>
     </a-layout-content>
   </a-layout>
 </template>
