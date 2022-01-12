@@ -18,8 +18,12 @@
     <a-layout-content>
       <a-table :data="data">
         <template #columns>
-          <a-table-column title="Name" data-index="name" :width="140"/>
-          <a-table-column title="Salary" data-index="salary" :width="100"/>
+          <a-table-column title="Name" :width="100" >
+            <template #cell="{ record }">
+              <div style="min-width: 100px;">{{ record.name }}</div>
+            </template>
+          </a-table-column>
+          <a-table-column title="Salary" data-index="salary" :width="100" />
           <a-table-column title="Address">
             <template #cell="{ record }">
               <div style="min-width: 200px;">{{ record.address }}</div>
