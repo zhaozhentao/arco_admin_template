@@ -5,7 +5,9 @@
     <div class="content-wrapper">
       <side-bar />
 
-      <router-view class="content" />
+      <transition name="fade-transform" mode="out-in">
+        <router-view class="content" />
+      </transition>
     </div>
   </div>
 </template>
