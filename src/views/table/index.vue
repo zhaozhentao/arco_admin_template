@@ -20,12 +20,12 @@
         <template #columns>
           <a-table-column title="Name" data-index="name" :width="140"/>
           <a-table-column title="Salary" data-index="salary" :width="100"/>
-          <a-table-column title="Address" data-index="address">
+          <a-table-column title="Address">
             <template #cell="{ record }">
               <div style="min-width: 200px;">{{ record.address }}</div>
             </template>
           </a-table-column>
-          <a-table-column class="min" title="Email" data-index="email" >
+          <a-table-column title="Email">
             <template #cell="{ record }">
               <div style="min-width: 200px;">{{ record.email }}</div>
             </template>
