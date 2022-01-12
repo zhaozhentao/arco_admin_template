@@ -17,32 +17,23 @@ export const routes = [
   {
     path: '/',
     component: Layout,
-    meta: { title: 'Menu1', icon: 'icon-apps' },
+    meta: { title: 'Example', icon: 'icon-apps' },
     children: [{
-      name: 'dashboard',
-      path: '/dashboard',
-      component: () => import('@/views/dashboard'),
-      meta: { title: 'Dashboard' }
+      name: 'Table',
+      path: '/table',
+      component: () => import('@/views/table'),
+      meta: { title: 'table' }
     }, {
       path: '/form',
-      component: () => import('@/views/dashboard'),
-      meta: { title: 'Form' }
+      component: () => import('@/views/table'),
+      meta: { title: 'form' }
     }]
   },
 
   {
-    path: '/menu2',
+    path: '/donate',
     component: Layout,
-    meta: { title: 'Menu2', icon: 'icon-idcard' },
-    children: [{
-      path: 'dashboard',
-      component: () => import('@/views/dashboard'),
-      meta: { title: 'Files' }
-    }, {
-      path: 'form',
-      component: () => import('@/views/dashboard'),
-      meta: { title: 'Dir' }
-    }]
+    meta: { title: 'Donate', icon: 'icon-idcard' }
   },
 
   {

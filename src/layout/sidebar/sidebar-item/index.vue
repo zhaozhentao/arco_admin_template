@@ -1,5 +1,9 @@
 <template>
   <a-menu-item v-if="item.children === undefined || item.children.length === 0" :key="fullPath">
+    <template v-if="item.meta.icon" #icon>
+      <component :is="item.meta.icon" />
+    </template>
+
     {{ item.meta.title }}
   </a-menu-item>
 
