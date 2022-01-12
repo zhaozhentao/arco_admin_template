@@ -1,3 +1,3 @@
 <script setup>
-window.open('https://arco.design/vue/docs/start')
+window.location.href='https://arco.design/vue/docs/start'
 </script>
