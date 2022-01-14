@@ -53,7 +53,6 @@ export default {
   left: 0;
   z-index: 100;
   width: 100%;
-  min-width: 1100px;
   height: 50px;
 }
 
