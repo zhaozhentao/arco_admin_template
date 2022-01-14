@@ -52,39 +52,28 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import { reactive } from 'vue'
 import useLoading from '@/hooks/loading'
 
-export default {
-  setup() {
-    const userInfo = reactive({
-      username: 'admin',
-      password: 'admin',
-    })
-    const { loading, setLoading } = useLoading()
+const userInfo = reactive({
+  username: 'admin',
+  password: 'admin',
+})
+const { loading, setLoading } = useLoading()
 
-    const store = useStore()
-    const router = useRouter()
+const store = useStore()
+const router = useRouter()
 
-    const handleSubmit = async () => {
-      setLoading(true)
-      const result = await store.dispatch('user/login', userInfo)
-      setLoading(false)
+const handleSubmit = async () => {
+  setLoading(true)
+  const result = await store.dispatch('user/login', userInfo)
+  setLoading(false)
 
-      if (result) {
-        await router.push({ name: 'table' })
-      }
-    }
-
-    return {
-      userInfo,
-      loading,
-      setLoading,
-      handleSubmit
-    }
+  if (result) {
+    await router.push({ name: 'table' })
   }
 }
 </script>
