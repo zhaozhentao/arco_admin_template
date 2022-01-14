@@ -12,19 +12,9 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Navbar from './navbar'
 import SideBar from './sidebar'
-
-export default {
-  components: {
-    Navbar,
-    SideBar
-  },
-  props: {
-    msg: String
-  }
-}
 </script>
 
 <style scoped>
