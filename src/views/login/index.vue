@@ -55,10 +55,10 @@
 <script>
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
-import { defineComponent, reactive } from 'vue'
+import { reactive } from 'vue'
 import useLoading from '@/hooks/loading'
 
-export default defineComponent({
+export default {
   setup() {
     const userInfo = reactive({
       username: 'admin',
@@ -86,7 +86,7 @@ export default defineComponent({
       handleSubmit
     }
   }
-})
+}
 </script>
 
 <style>
