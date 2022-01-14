@@ -28,20 +28,22 @@
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    async onMenuClick(v) {
-      switch (v) {
-        case '退出登录':
-          await this.$store.dispatch('user/logout')
-          await this.$router.replace('/login')
-          break
-        case 'Github':
-          window.open("https://github.com/zhaozhentao/arco_admin_template", "_blank")
-          break
-      }
-    }
+<script setup>
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
+
+const $store = useStore()
+const $router = useRouter()
+
+const onMenuClick = async v => {
+  switch (v) {
+    case '退出登录':
+      await $store.dispatch('user/logout')
+      await $router.replace('/login')
+      break
+    case 'Github':
+      window.open("https://github.com/zhaozhentao/arco_admin_template", "_blank")
+      break
   }
 }
 </script>
