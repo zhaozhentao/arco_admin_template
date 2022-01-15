@@ -1,30 +1,28 @@
 <template>
-  <div class="layout-navbar">
-    <div class="navbar">
-      <div class="side-left">
-        <div style="height: 38px"><img src="@/assets/icon.svg" /></div>
+  <div class="navbar">
+    <div class="side-left">
+                        <div style="height: 38px"><img src="@/assets/icon.svg" /></div>
 
-        <h5 class="arco-typography brand">Arco Design</h5>
-      </div>
+                        <h5 class="arco-typography brand">Arco Design</h5>
+                        </div>
 
-      <ul class="side-right">
-        <li>
-          <a-dropdown @select="onMenuClick">
-            <a-avatar :size="32">
-              <img
-                alt="avatar"
-                src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
-              />
-            </a-avatar>
+    <ul class="side-right">
+                        <li>
+                        <a-dropdown @select="onMenuClick">
+                        <a-avatar :size="32">
+                        <img
+                        alt="avatar"
+                        src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
+                        />
+                        </a-avatar>
 
-            <template #content>
-              <a-doption>Github</a-doption>
-              <a-doption>退出登录</a-doption>
-            </template>
-          </a-dropdown>
-        </li>
-      </ul>
-    </div>
+                        <template #content>
+                        <a-doption>Github</a-doption>
+                        <a-doption>退出登录</a-doption>
+                        </template>
+                        </a-dropdown>
+                        </li>
+                        </ul>
   </div>
 </template>
 
@@ -49,19 +47,15 @@ const onMenuClick = async v => {
 </script>
 
 <style scoped>
-.layout-navbar {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
   height: 50px;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
-  height: 100%;
   background-color: var(--color-bg-2);
   border-bottom: 1px solid var(--color-border);
 }
