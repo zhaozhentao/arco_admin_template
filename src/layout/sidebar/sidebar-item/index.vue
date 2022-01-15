@@ -18,23 +18,18 @@
   </a-sub-menu>
 </template>
 
-<script>
-export default {
-  name: 'SidebarItem',
-  props: {
-    item: {
-      type: Object
-    },
-    parentPath: {
-      type: String
-    }
-  },
-  computed: {
-    fullPath() {
-      let path = this.item.path.startsWith('/') ? this.item.path.substr(1) : this.item.path
-      path = this.parentPath + '/' + path
-      return path.replaceAll('//', '/')
-    }
-  }
-}
+<script setup>
+import SidebarItem from '.'
+import { defineProps, computed } from 'vue'
+
+const props = defineProps({
+  item: Object,
+  parentPath: String
+})
+
+const fullPath = computed(() => {
+  let path = props.item.path.startsWith('/') ? props.item.path.substr(1) : props.item.path
+  path = props.parentPath + '/' + path
+  return path.replaceAll('//', '/')
+})
 </script>
