@@ -1,4 +1,4 @@
-import Layout from '@/layout'
+import Layout from '@/layout/content'
 import { createRouter, createWebHashHistory } from "vue-router"
 
 export const routes = [

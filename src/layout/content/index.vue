@@ -13,8 +13,8 @@
 </template>
 
 <script setup>
-import Navbar from './navbar'
-import SideBar from './sidebar'
+import Navbar from '@/layout/navbar'
+import SideBar from '@/layout/sidebar'
 </script>
 
 <style scoped>
