@@ -1,28 +1,28 @@
 <template>
   <div class="navbar">
     <div class="side-left">
-                        <div style="height: 38px"><img src="@/assets/icon.svg" /></div>
+      <div style="height: 38px"><img src="@/assets/icon.svg" /></div>
 
-                        <h5 class="arco-typography brand">Arco Design</h5>
-                        </div>
+      <h5 class="arco-typography brand">Arco Design</h5>
+    </div>
 
     <ul class="side-right">
-                        <li>
-                        <a-dropdown @select="onMenuClick">
-                        <a-avatar :size="32">
-                        <img
-                        alt="avatar"
-                        src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
-                        />
-                        </a-avatar>
+      <li>
+        <a-dropdown @select="onMenuClick">
+          <a-avatar :size="32">
+            <img
+              alt="avatar"
+              src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
+            />
+          </a-avatar>
 
-                        <template #content>
-                        <a-doption>Github</a-doption>
-                        <a-doption>退出登录</a-doption>
-                        </template>
-                        </a-dropdown>
-                        </li>
-                        </ul>
+          <template #content>
+            <a-doption>Github</a-doption>
+            <a-doption>退出登录</a-doption>
+          </template>
+        </a-dropdown>
+      </li>
+    </ul>
   </div>
 </template>
 
