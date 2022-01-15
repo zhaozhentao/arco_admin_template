@@ -11,25 +11,16 @@
   </a-menu>
 </template>
 
-<script>
-import sidebarItem from './sidebar-item'
+<script setup>
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import SidebarItem from './sidebar-item'
 
-export default {
-  components: {
-    sidebarItem
-  },
-  computed: {
-    routes() {
-      return this.$router.options.routes.filter(i => !i['hidden'])
-    },
-    openedMenu() {
-      return this.$route.path
-    }
-  },
-  methods: {
-    to(key) {
-      this.$router.push(key)
-    }
-  }
-}
+const $router = useRouter()
+
+const routes = computed(() => $router.options.routes.filter(i => !i['hidden']))
+
+const openedMenu = computed(() => $router.currentRoute.value.path)
+
+const to = key => $router.push(key)
 </script>
