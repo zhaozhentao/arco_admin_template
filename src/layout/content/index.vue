@@ -2,13 +2,11 @@
   <div class="page-wrapper">
     <navbar />
 
-    <div class="content-wrapper">
-      <side-bar />
+    <side-bar />
 
-      <transition name="fade-transform" mode="out-in">
-        <router-view class="content" />
-      </transition>
-    </div>
+    <transition name="fade-transform" mode="out-in">
+      <router-view class="content" />
+    </transition>
   </div>
 </template>
 
@@ -21,11 +19,6 @@ import SideBar from '@/layout/sidebar'
 .page-wrapper {
   box-sizing: border-box;
   padding-top: 50px;
-  width: 100%;
-  height: 100%;
-}
-
-.content-wrapper {
   display: flex;
   width: 100%;
   height: 100%;
