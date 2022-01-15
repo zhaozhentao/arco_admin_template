@@ -12,6 +12,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
+    box-sizing: border-box;
+    padding-top: 50px;
+    display: flex;
+    width: 100%;
 }
 
 /* fade-transform */

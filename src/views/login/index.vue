@@ -1,54 +1,56 @@
 <template>
-  <div class="login-form">
-    <div class="login-form-title">Login Arco Admin</div>
+  <div class="login">
+    <div class="login-form">
+      <div class="login-form-title">Login Arco Admin</div>
 
-    <a-form
-      ref="loginForm"
-      :model="userInfo"
-      layout="vertical"
-      @submit="handleSubmit"
-    >
-      <a-form-item
-        field="username"
-        :rules="[{ required: true, message: '用户名不能为空' }]"
-        :validate-trigger="['change', 'blur']"
-        hide-label
+      <a-form
+        ref="loginForm"
+        :model="userInfo"
+        layout="vertical"
+        @submit="handleSubmit"
       >
-        <a-input v-model="userInfo.username" placeholder="用户名：admin" @keyup.enter="handleSubmit">
-          <template #prefix>
-            <icon-user />
-          </template>
-        </a-input>
-      </a-form-item>
+        <a-form-item
+          field="username"
+          :rules="[{ required: true, message: '用户名不能为空' }]"
+          :validate-trigger="['change', 'blur']"
+          hide-label
+        >
+          <a-input v-model="userInfo.username" placeholder="用户名：admin" @keyup.enter="handleSubmit">
+            <template #prefix>
+              <icon-user />
+            </template>
+          </a-input>
+        </a-form-item>
 
-      <a-form-item
-        field="password"
-        :rules="[{ required: true, message: '密码不能为空' }]"
-        :validate-trigger="['change', 'blur']"
-        hide-label
-      >
-        <a-input v-model="userInfo.password" placeholder="密码：admin" type="password" @keyup.enter="handleSubmit">
-          <template #prefix>
-            <icon-lock />
-          </template>
-        </a-input>
-      </a-form-item>
+        <a-form-item
+          field="password"
+          :rules="[{ required: true, message: '密码不能为空' }]"
+          :validate-trigger="['change', 'blur']"
+          hide-label
+        >
+          <a-input v-model="userInfo.password" placeholder="密码：admin" type="password" @keyup.enter="handleSubmit">
+            <template #prefix>
+              <icon-lock />
+            </template>
+          </a-input>
+        </a-form-item>
 
-      <a-space :size="16" direction="vertical">
-        <div class="login-form-password-actions">
-          <a-checkbox checked="rememberPassword" @change="setRememberPassword">
-            记住密码
-          </a-checkbox>
-          <a-link>忘记密码？</a-link>
-        </div>
-        <a-button type="primary" html-type="submit" long :loading="loading">
-          登录
-        </a-button>
-        <a-button type="text" long class="login-form-register-btn">
-          注册账号
-        </a-button>
-      </a-space>
-    </a-form>
+        <a-space :size="16" direction="vertical">
+          <div class="login-form-password-actions">
+            <a-checkbox checked="rememberPassword" @change="setRememberPassword">
+              记住密码
+            </a-checkbox>
+            <a-link>忘记密码？</a-link>
+          </div>
+          <a-button type="primary" html-type="submit" long :loading="loading">
+            登录
+          </a-button>
+          <a-button type="text" long class="login-form-register-btn">
+            注册账号
+          </a-button>
+        </a-space>
+      </a-form>
+    </div>
   </div>
 </template>
 
@@ -78,12 +80,14 @@ const handleSubmit = async () => {
 }
 </script>
 
-<style>
-#app {
+<style scoped>
+.login {
+  position: fixed;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0;
+  justify-content: center
 }
 
 .login-form {
