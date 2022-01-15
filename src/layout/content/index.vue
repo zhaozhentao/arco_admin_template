@@ -17,5 +17,6 @@ import SideBar from '@/layout/sidebar'
 .content {
   width: 100%;
   overflow-y: scroll;
+  margin-top: 50px;
 }
 </style>

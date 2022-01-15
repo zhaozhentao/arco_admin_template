@@ -1,6 +1,6 @@
 <template>
   <a-menu
-    :style="{ width: '220px', height: '100%', flexShrink: 0 }"
+    :style="{ width: '220px', height: '100%', flexShrink: 0, marginTop: '50px' }"
     :default-selected-keys="[openedMenu]"
     :auto-open="true"
     @menu-item-click="to"
