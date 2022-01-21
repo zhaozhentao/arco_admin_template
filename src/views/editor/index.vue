@@ -20,22 +20,18 @@ export default {
     hljs.registerLanguage('php', php);
 
     let s = new SimpleMDE({
-      previewRender: (plainText) => {
-        return marked(plainText, {
-          langPrefix: 'hljs ',
-          renderer: new marked.Renderer(),
-          gfm: true,
-          pedantic: false,
-          sanitize: false,
-          tables: true,
-          breaks: true,
-          smartLists: true,
-          smartypants: true,
-          highlight: function (code) {
-            return hljs.highlightAuto(code).value;
-          }
-        });
-      }
+      previewRender: plainText => marked(plainText, {
+        langPrefix: 'hljs ',
+        renderer: new marked.Renderer(),
+        gfm: true,
+        pedantic: false,
+        sanitize: false,
+        tables: true,
+        breaks: true,
+        smartLists: true,
+        smartypants: true,
+        highlight: code => hljs.highlightAuto(code).value
+      })
     })
   }
 }
