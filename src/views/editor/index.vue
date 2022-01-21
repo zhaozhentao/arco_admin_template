@@ -1,7 +1,9 @@
 <template>
   <a-layout class="layout-demo">
     <a-layout-content>
-      <textarea></textarea>
+      <textarea ref="t" />
+
+      <div v-html="preview" />
     </a-layout-content>
   </a-layout>
 </template>
@@ -16,22 +18,34 @@ import 'simplemde/dist/simplemde.min.css'
 import 'highlight.js/styles/monokai-sublime.css'
 
 export default {
+  data() {
+    return {
+      preview: null
+    }
+  },
   mounted() {
     hljs.registerLanguage('php', php);
 
+    let previewRender = plainText => marked(plainText, {
+      langPrefix: 'hljs ',
+      renderer: new marked.Renderer(),
+      gfm: true,
+      pedantic: false,
+      sanitize: false,
+      tables: true,
+      breaks: true,
+      smartLists: true,
+      smartypants: true,
+      highlight: code => hljs.highlightAuto(code).value
+    })
+
     let s = new SimpleMDE({
-      previewRender: plainText => marked(plainText, {
-        langPrefix: 'hljs ',
-        renderer: new marked.Renderer(),
-        gfm: true,
-        pedantic: false,
-        sanitize: false,
-        tables: true,
-        breaks: true,
-        smartLists: true,
-        smartypants: true,
-        highlight: code => hljs.highlightAuto(code).value
-      })
+      element: this.$refs['t'],
+      previewRender
+    })
+
+    s.codemirror.on('change', () => {
+      this.preview = previewRender(s.value())
     })
   }
 }
