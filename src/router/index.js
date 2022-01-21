@@ -43,13 +43,13 @@ export const routes = [
   },
 
   {
-    path: '/donate',
+    path: '/editor',
     component: Layout,
     children: [{
       path: '',
-      name: 'donate',
-      component: () => import('@/views/donate'),
-      meta: { title: 'Donate', icon: 'icon-thumb-up' }
+      name: 'editor',
+      component: () => import('@/views/editor'),
+      meta: { title: 'editor', icon: 'icon-edit' }
     }]
   },
 
