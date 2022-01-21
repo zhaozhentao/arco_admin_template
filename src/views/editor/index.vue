@@ -20,10 +20,6 @@ export default {
     hljs.registerLanguage('php', php);
 
     let s = new SimpleMDE({
-      renderingConfig: {
-        singleLineBreaks: false,
-        codeSyntaxHighlighting: true,
-      },
       previewRender: (plainText) => {
         return marked(plainText, {
           langPrefix: 'hljs ',
