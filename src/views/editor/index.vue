@@ -1,9 +1,18 @@
 <template>
   <a-layout class="layout-demo">
     <a-layout-content>
-      <textarea ref="t" />
+      <a-row class="grid-demo" :gutter="24">
+        <a-col :span="12">
+          <textarea ref="t" />
+        </a-col>
 
-      <div v-html="preview" />
+        <a-col :span="12">
+          <div style="border: 1px dashed rgb(204, 204, 204); border-radius: 5px; padding: 12px">
+            <div style="font-size: 26px; font-weight: 700">预览</div>
+            <div v-html="preview" />
+          </div>
+        </a-col>
+      </a-row>
     </a-layout-content>
   </a-layout>
 </template>
