@@ -1,11 +1,15 @@
 <template>
-  <navbar />
+  <div class="page-wrapper">
+    <navbar />
 
-  <side-bar />
+    <div class="content-wrapper">
+      <side-bar />
 
-  <transition name="fade-transform" mode="out-in">
-    <router-view class="content" />
-  </transition>
+      <transition name="fade-transform" mode="out-in">
+        <router-view class="content" />
+      </transition>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -14,9 +18,21 @@ import SideBar from '@/layout/sidebar'
 </script>
 
 <style scoped>
+.page-wrapper {
+  box-sizing: border-box;
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
 .content {
   width: 100%;
   overflow-y: scroll;
-  margin-top: 50px;
 }
 </style>
