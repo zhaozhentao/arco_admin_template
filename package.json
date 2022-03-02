@@ -2,7 +2,7 @@
   "name": "arco_admin_template",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -14,14 +14,14 @@
     "marked": "^4.0.12",
     "simplemde": "^1.11.2",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@arco-design/web-vue": "^2.17.0",
-    "@vitejs/plugin-vue": "^2.2.2",
+    "@vitejs/plugin-vue": "^2.2.4",
     "mockjs": "^1.1.0",
-    "sass": "1.49.8",
-    "vite": "^2.8.4",
+    "sass": "1.49.9",
+    "vite": "^2.8.6",
     "vite-plugin-mock": "^2.9.6",
     "vuex": "^4.0.2"
   }
