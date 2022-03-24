@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "codemirror": "^5.65.2",
-    "highlight.js": "^11.4.0",
+    "highlight.js": "^11.5.0",
     "js-cookie": "^3.0.1",
     "marked": "^4.0.12",
     "simplemde": "^1.11.2",
@@ -17,7 +17,7 @@
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@arco-design/web-vue": "^2.19.0",
+    "@arco-design/web-vue": "^2.20.1",
     "@vitejs/plugin-vue": "^2.2.4",
     "mockjs": "^1.1.0",
     "sass": "1.49.9",
