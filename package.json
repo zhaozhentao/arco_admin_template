@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@arco-design/web-vue": "^2.21.2",
-    "@vitejs/plugin-vue": "^2.2.4",
+    "@vitejs/plugin-vue": "^2.3.1",
     "mockjs": "^1.1.0",
     "sass": "1.49.9",
-    "vite": "^2.8.6",
+    "vite": "^2.9.0",
     "vite-plugin-mock": "^2.9.6",
     "vuex": "^4.0.2"
   }
