@@ -13,15 +13,15 @@
     "js-cookie": "^3.0.1",
     "marked": "^4.0.14",
     "simplemde": "^1.11.2",
-    "vue": "^3.2.32",
+    "vue": "^3.2.33",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@arco-design/web-vue": "^2.23.0",
+    "@arco-design/web-vue": "^2.24.1",
     "@vitejs/plugin-vue": "^2.3.1",
     "mockjs": "^1.1.0",
     "sass": "1.49.9",
-    "vite": "^2.9.1",
+    "vite": "^2.9.5",
     "vite-plugin-mock": "^2.9.6",
     "vuex": "^4.0.2"
   }
