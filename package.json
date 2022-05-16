@@ -17,11 +17,11 @@
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
-    "@arco-design/web-vue": "^2.26.0",
-    "@vitejs/plugin-vue": "^2.3.2",
+    "@arco-design/web-vue": "^2.27.0",
+    "@vitejs/plugin-vue": "^2.3.3",
     "mockjs": "^1.1.0",
     "sass": "1.49.9",
-    "vite": "^2.9.8",
+    "vite": "^2.9.9",
     "vite-plugin-mock": "^2.9.6",
     "vuex": "^4.0.2"
   }
