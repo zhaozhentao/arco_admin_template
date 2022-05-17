@@ -11,13 +11,13 @@
     "codemirror": "^5.65.3",
     "highlight.js": "^11.5.1",
     "js-cookie": "^3.0.1",
-    "marked": "^4.0.15",
+    "marked": "^4.0.16",
     "simplemde": "^1.11.2",
     "vue": "^3.2.33",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
-    "@arco-design/web-vue": "^2.27.0",
+    "@arco-design/web-vue": "^2.27.1",
     "@vitejs/plugin-vue": "^2.3.3",
     "mockjs": "^1.1.0",
     "sass": "1.49.9",
