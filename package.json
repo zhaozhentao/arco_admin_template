@@ -13,7 +13,7 @@
     "js-cookie": "^3.0.1",
     "marked": "^4.1.0",
     "simplemde": "^1.11.2",
-    "vue": "^3.2.39",
+    "vue": "^3.2.40",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
