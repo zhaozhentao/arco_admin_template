@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "codemirror": "^5.65.10",
-    "highlight.js": "^11.6.0",
+    "highlight.js": "^11.7.0",
     "js-cookie": "^3.0.1",
     "marked": "^4.2.3",
     "simplemde": "^1.11.2",
