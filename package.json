@@ -14,14 +14,14 @@
     "marked": "^4.3.0",
     "simplemde": "^1.11.2",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@arco-design/web-vue": "^2.48.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "mockjs": "^1.1.0",
     "sass": "1.49.9",
-    "vite": "^4.3.9",
+    "vite": "^4.4.1",
     "vite-plugin-mock": "^2.9.8",
     "vuex": "^4.1.0"
   }
