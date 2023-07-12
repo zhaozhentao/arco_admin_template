@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "mockjs": "^1.1.0",
     "sass": "1.49.9",
-    "vite": "^4.4.1",
+    "vite": "^4.4.3",
     "vite-plugin-mock": "^2.9.8",
     "vuex": "^4.1.0"
   }
