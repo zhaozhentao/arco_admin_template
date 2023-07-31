@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "codemirror": "^5.65.13",
+    "codemirror": "^5.65.14",
     "highlight.js": "^11.8.0",
     "js-cookie": "^3.0.5",
     "marked": "^4.3.0",
@@ -17,11 +17,11 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@arco-design/web-vue": "^2.49.1",
+    "@arco-design/web-vue": "^2.49.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "mockjs": "^1.1.0",
-    "sass": "1.49.9",
-    "vite": "^4.4.6",
+    "sass": "^1.64.1",
+    "vite": "^4.4.7",
     "vite-plugin-mock": "^2.9.8",
     "vuex": "^4.1.0"
   }
